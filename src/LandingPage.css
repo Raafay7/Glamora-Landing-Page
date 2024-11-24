@@ -1,0 +1,268 @@
+/* Global Styles */
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.landing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.header nav ul li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li:hover {
+  color: var(--primary-color);
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 600px;
+  background-image: url('D:\FYP\glamora\src\hero-background.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  margin: 0 10px;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff5252;
+}
+
+/* Featured Categories */
+.featured-categories {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.featured-categories .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.shop-button {
+  margin: 15px 0;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Personalized Features */
+.personalized-features {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.personalized-features ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.personalized-features li {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.quote-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.testimonial {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.newsletter-signup form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.newsletter-signup input {
+  padding: 12px;
+  width: 300px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-signup button {
+  padding: 12px 24px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .featured-categories .grid,
+  .quote-slider {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .newsletter-signup form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-signup input,
+  .newsletter-signup button {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+}
